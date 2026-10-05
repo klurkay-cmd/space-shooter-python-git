@@ -28,11 +28,10 @@ for i in range(2):
     alien_images.append(img)
 
 aliens = []
-for i in range(5):
-    alien1 = {'x': 50*i + 50 , 'y': 0}
-    alien2 = {'x': 50*i + 50, 'y': 50}
-    aliens.append(alien1)
-    aliens.append(alien2)
+for row in range(38):
+    for col in range(12):
+        alien1 = {'x': 50*row + 10 , 'y': 300 - 50*col}
+        aliens.append(alien1)
 
 alien_w = alien_images[0].get_rect().size[0]
 alien_h = alien_images[0].get_rect().size[1]
