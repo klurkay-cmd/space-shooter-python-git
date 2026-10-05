@@ -8,7 +8,7 @@ import pygame as pg
 pg.init()
 clock = pg.time.Clock()
 
-screen = pg.display.set_mode((400,600))
+screen = pg.display.set_mode((1920,1020))
 pg.display.set_caption("Space Shooter")
 
 # Spaceship character
@@ -134,6 +134,7 @@ while running:
                     # Alien is hit
                     projectiles.remove(projectile)
                     aliens.remove(alien)
+                    score =+ 1
 
                     # No further aliens can be hit by this projectile 
                     # so skip to the next projectile 
