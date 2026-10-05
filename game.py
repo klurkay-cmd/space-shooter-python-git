@@ -171,7 +171,7 @@ while running:
 
     # Scoreboard
     text = font_scoreboard.render(f"{score:04d}", True, (255,255,255))
-    screen.blit(text, (10,560))
+    screen.blit(text, (10,990))
 
     # Update window with newly drawn pixels
     pg.display.flip()
