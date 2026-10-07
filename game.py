@@ -36,6 +36,15 @@ for row in range(38):
 alien_w = alien_images[0].get_rect().size[0]
 alien_h = alien_images[0].get_rect().size[1]
 
+# Charge Projectile
+charge_images = []
+sequence = [0,1,0,1,2]
+for i in range(5):
+    img = pg.image.load(f"images/pixil-frame-{sequence[i]}.png")
+    charge_images.append(img)
+
+charges = [1,2,3]
+
 # Projectiles 
 projectile_fired = False
 projectiles = []
@@ -162,6 +171,11 @@ while running:
     r = int(tick/8) % 2
     for alien in aliens:
         screen.blit(alien_images[r], (alien['x'], alien['y']))
+
+    # Charge Projectile
+    r = int(tick/8) % 5
+    for shots in charges:
+        screen.blit(charge_images[r], (shots*100, 100))
 
     # Projectiles
     for projectile in projectiles:
